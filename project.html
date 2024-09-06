@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion e commerce</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+         body{
+            overflow-x: hidden;
+         }
+           
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width:100%;
+    z-index: 1;
+    padding:2%;
+    }
+   .brand-title {
+    font-size: 1.5rem;
+    color:red;
+   margin-left: 3%;
+   font-family:fantasy;
+    }
+
+     .navbar-links ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+   .navbar-links li {
+    margin-left: 20px;
+    }
+
+   .navbar-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    }
+    .navbar-links ul li ul{
+    display: none;
+    position:absolute;
+    top:100%;
+    left:65%;
+    background-color: #333;
+    padding:15px 0;
+    min-width:150px;
+     }
+   .navbar-links ul li ul li{
+    display: block;
+    }
+    .navbar-links ul li ul li a{
+    color:#fff;
+    padding:15px;
+    }
+    .navbar-links ul li ul li a:hover{
+    background-color: red;
+    }
+     .navbar-links ul li:hover ul{
+    display: block;
+    }
+
+    .toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    }
+
+    .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+     }
+   /* @media (max-width:450px) {
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links ul li ul {
+        position: static;
+        padding-left: 0;
+    }
+
+    .navbar-links ul li ul li a {
+        padding: 10px 20px;
+    }
+} */
+@media (max-width: 450px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .brand-title {
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-links ul li {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .navbar-links ul li ul {
+    left: 0;
+    position: static;
+    padding: 0;
+  }
+
+  .navbar-links ul li ul li a {
+    padding: 10px;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
+/* Toggle Menu Function */
+function toggleMenu() {
+  const navbarLinks = document.querySelector('.navbar-links');
+  navbarLinks.classList.toggle('active');
+}
+
+           .el9{
+            border: 1px solid red;
+            height:100vh;
+             }
+        .el1{
+            background-color:lightgray;
+            position: relative;
+         }
+        .hero{
+            padding:3%;
+        }
+         .fa-tags{
+            color: red;
+            font-size:50px;
+        }
+        .icon .material-symbols-outlined {
+            color: red;
+            font-size:42px;
+            position: relative;
+            left:80%;
+         }
+         .hero-content h1{
+            font-size: 3em;
+            line-height: 1.2;
+            margin: 0;
+            font-family:'arial',sans-serif;
+            color: #333;
+         }
+         .hero p{
+            font-size: 1.2em;
+            color: #666;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+         .highlight{
+            font-weight: bold;
+            color: #333;
+         }
+         .icon2 .material-symbols-outlined{
+            color: red;
+            font-size:42px;
+            position: relative;
+            left:90%;
+            padding:20%;
+          }
+          .hero{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .fade-in-fade-out{
+            height:80%;
+            width:50%;
+            }
+          .shop{
+            display: flex;
+            justify-content: space-between;
+          }
+          @keyframes fade-inout{
+            0%{
+              opacity:1;
+            }
+            100%{
+              opacity:0;
+            }
+            
+          }
+          .fade-in-fade-out{
+            animation:fade-inout 7s alternate;
+          }
+          .el1 .cr1{
+            color: red;
+            position: relative;
+          }
+          .cr1{
+            position: absolute;
+            left:45%;
+          }
+          .shop1{
+            background-color: red;
+            width:11vw;
+            height:4vh;
+            text-align: center;
+            color: white;
+         }
+         .shop1:hover{
+          color:black
+         }
+         /* @media only screen and (max-width:600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .hero p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .icon, .icon2 {
+    left: 0;
+    text-align: center;
+    position: static;
+  }
+
+  .fade-in-fade-out {
+    width: 100%;
+    height: auto;
+  }
+
+  .shop1 {
+    width: 50%;
+    height: 6vh;
+  }
+
+  .cr1 {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+     } */
+     @media (max-width: 450px) {
+  .el1 {
+    padding: 25px;
+    background-color: lightgray;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+  }
+
+  .icon {
+    position: static;
+    text-align: center;
+  }
+
+  .icon2 {
+    position: static;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .material-symbols-outlined {
+    font-size: 36px;
+  }
+
+  .hero-content h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .shop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop1 {
+    width: 60%;
+    height: auto;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+
+  .fade-in-fade-out {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .fade-in-fade-out img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cr1 {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+           .el2{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+         }
+         .para1{
+            display: flex;
+            justify-content:space-around;
+            gap:6%;
+            color: #666;
+         }
+         @media only screen and (max-width:600px) {
+             .el2{
+              flex-direction:column;
+             }
+          
+         }
+         
+         .container1{
+            width:50%;
+            height:80%;
+            background-color:lightgray;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            
+             }
+             .box1{
+            padding:30%;
+             }
+             .cloud{
+                color: red;
+             }
+             .s1{
+                font-family:'Arial',sans-serif;
+                font-size:25px;
+             }
+             .p1{
+                color: #777;
+             }
+             .p2 .shop-button{
+                display: inline-block;
+                padding: 15px 30px;
+                background-color:red;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 18px;
+                transition:background-color 0.3s ease;
+             }
+             .p2 .shop-button:hover{
+                background-color:black;
+             }
+
+              .container2 .black-shirt img{
+              width:60%;
+              height:92%;
+              position: absolute;
+              left:120%;
+              top:5%;
+             }
+             @media only screen and (max-width: 600px) {
+        .container1 {
+        width: 100%;
+        height: auto;
+       flex-direction: column;
+        align-items: center;
+       text-align: center;
+        }
+
+       .box1 {
+    padding: 20%;
+       }
+
+      .s1 {
+    font-size: 20px;
+       }
+
+     .p1 {
+    font-size: 16px;
+       }
+
+      .p2 .shop-button {
+    padding: 10px 20px;
+    font-size: 16px;
+     }
+
+       .container2 .black-shirt img {
+        width: 80%;
+       height: auto;
+       position: static;
+       left: 0;
+      top: 0;
+      margin-top: 20px;
+      }
+      }
+         .el4 .new{
+              font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-size:30px;
+              text-align: center;
+             }
+             .el4 .drms{
+              text-align: center;
+              color: #777;
+             }
+             .product-grid{
+              display:flex;
+              flex-direction: row;
+              gap:3%;
+               }
+             .product-card{
+              background-color:#ddd;
+              filter:grayscale(.4);
+              
+              overflow: hidden;
+              transition: transform 0.2s ease;
+             }
+             .product-card:hover{
+              filter: grayscale(0);
+              transform: scale(1.05) rotate(7deg);
+
+             }
+             .product-card img{
+              width:100%;
+              height:60%;
+              
+             } 
+             .product-info{
+              padding: 10px;
+              text-align: center;
+             }
+             .product-info h3{
+               margin:0 0 10px 0; 
+              font-size: 1.1rem;
+              color: #333;
+             }
+            .product-info.category{
+              font-size: 0.9rem;
+              color:#ddd;
+               margin-bottom: 10px; 
+            }
+            .product-info .price{
+              font-size: 1.2rem;
+              color: #333;
+               margin-bottom: 3px; 
+            }
+            .product-info .price .old-price{
+              text-decoration: line-through;
+              color: #999;
+               margin-right: 5px; 
+            }
+            .add-to-cart{
+              display: inline-block;
+              border-radius:70%;
+              cursor: pointer;
+              transition: background-color 0.2s ease;
+              padding: 10px ;
+              }
+         .add-to-cart:hover{
+          background-color:red;
+          color: white;
+          
+         }
+         @media only screen and (width<600px){
+          .product-grid{
+            display: flex;
+            flex-direction: column;
+          }
+          
+         }
+         .el5{
+          background-color:white;
+          position: relative;
+         }
+         .trans1{
+          height:60%;
+          width:60%;
+          position: absolute;
+          left:1px;
+          top:5%;
+         }
+         .sandals1{
+          text-align:center ;
+          font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-size:35px;
+
+         }
+         .sandals2{
+          text-align: center;
+          font-size: larger;
+          color: #777;
+          
+       }
+       strong{
+        color: black;
+       }
+         .countdown{
+          font-size:300%;
+          margin-bottom: 20px;
+          text-align: center;
+
+         }
+         .countdown div{
+          display: inline-block;
+          width:70px;
+          text-align: center;
+         }
+         .grab{
+          text-align: center;
+          
+         }
+          .grabitem{
+            padding: 15px 30px;
+                background-color:red;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 18px;
+                transition:background-color 0.3s ease;
+               }
+                .grabitem:hover{
+                background-color:black;
+               }
+             @media only screen and (max-width: 600px) {
+            .trans1 {
+             width: 80%;
+             height: auto;
+              left: 10%;
+             top: 10%;
+             position: relative;
+            }
+
+          .sandals1 {
+           font-size: 24px;
+            }
+
+           .sandals2 {
+           font-size: 16px;
+           }
+
+            .countdown {
+          font-size: 150%;
+           }
+
+         .countdown div {
+           width: 50px;
+             }
+
+              .grabitem {
+               padding: 10px 20px;
+               font-size: 16px;
+               }
+            }
+             .el6 .new1{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-size:30px;
+              text-align: center;
+               }
+               .el6 .drms1{
+                text-align: center;
+                color: #777;
+
+               }
+               .image3{
+                width:80% !important;
+                padding-left:10%!important;
+               }
+               .carousel-control-prev{
+                border-radius: 50% !important;
+              
+                position: absolute;
+                left:6%;
+               }
+               .carousel-control-next{
+                border-radius: 50% !important;
+                
+                position: absolute;
+                left:68%;
+               }
+               .boot{
+                display: flex;
+                flex-direction: row;
+               }
+               .fire{
+                padding-left:37%;
+                color: red;
+               }
+               .world{
+                font-size:150%;
+               }
+               .look{
+                font-size: larger;
+                color: #999;
+                padding-left: 20%;
+               }
+               .shop-men{
+                background-color: red;
+                padding:10%;
+                text-align: center;
+                color: white;
+               } 
+               .shop-men:hover{
+                background-color: black;
+                color:white;
+                transition:background-color 0.3s ease-in-out;
+               }
+               @media only screen and (max-width: 600px) {
+            .new1 {
+              font-size: 24px;
+             }
+
+            .drms1 {
+              font-size: 18px;
+              }
+
+                .image3 {
+                   width: 100% !important;
+              padding-left: 0 !important;
+               }
+
+  .carousel-control-prev {
+    left: 5%;
+  }
+
+  .carousel-control-next {
+    left: 85%;
+  }
+
+  .boot {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fire {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .world {
+    font-size: 120%;
+    text-align: center;
+  }
+
+  .look {
+    font-size: medium;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .shop-men {
+    padding: 8%;
+    font-size: 16px;
+    margin-top: 20px;}
+  }
+               
+             .trending{
+                font-size:150%;
+                padding-left:12%;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+               }
+               .outer{
+                position:relative;
+                width:30%;
+                height:100%;
+                
+               }
+               .outer img,.inner img{
+                width:70%;
+                
+               }
+               .inner img{
+                height:50%;
+               }
+               .inner {
+                
+                position:absolute;
+                top:0%;
+                left:0;
+                display:none;
+               }
+               .outer:hover .inner{
+                display:block;
+               }
+                .outer1{
+                position: relative;
+                width:30%;
+                height:100%;
+                
+               }
+               .outer1 img,.inner1 img{
+                width:70%;
+               }
+               .inner1 img{
+                height:50%;
+                
+               }
+               .inner1{
+                position: absolute;
+                top:0%;
+                left:0%;
+                display: none;
+               }
+               .outer1:hover .inner1{
+                display: block;
+
+                
+               } 
+               .outer2{
+                
+                position: relative;
+                width:30%;
+                height:100%;
+               }
+               .outer2 img,.inner2 img{
+                width:70%;
+               }
+               .inner2 img{
+                height:50%;
+                
+               }
+               .inner2{
+                position: absolute;
+                top:0%;
+                left:0%;
+                display: none;
+               }
+               .outer2:hover .inner2{
+                display: block;
+              } 
+              .trends{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+         }
+         @media only screen and (max-width: 600px) {
+  .trending {
+    font-size: 120%;
+    padding-left: 5%;
+    text-align: center;
+  }
+
+  .trends {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .outer, .outer1, .outer2 {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .outer img, .inner img, 
+  .outer1 img, .inner1 img, 
+  .outer2 img, .inner2 img {
+    width: 100%;
+  }
+
+  .shirt, .sweater, .cost, .nik,
+  .shirt1, .sweater1, .cost1, .nik1,
+  .shirt2, .sweater2, .cost2, .nik2 {
+    text-align: center;
+     }
+     }
+              .el9{
+                border:1px solid white;
+                 overflow: 0;
+              }
+              .looking{
+                position: relative;
+                overflow:0;
+              }
+
+              .offer{
+               position: absolute;
+                top:10%;
+                left:35%;
+                font-size:400%;
+                color:white;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+              }
+              .collection{
+               position:absolute;
+                top:35%;
+                left:39%;
+                color:whitesmoke;
+                font-size:150%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+              }
+              .email{
+                position: absolute;
+                top:53%;
+                left:35%;
+                }
+              input{
+                width:210%;
+                padding: 10%;
+                border:red;
+                text-align: center;
+              }
+              .subscribe{
+                position: absolute;
+                top:70%;
+                left:35%;
+              }
+              .sub{
+                width:450%;
+                padding:28%;
+                text-align: center;
+                border:none;
+                background-color: red;
+                color: white;
+              } 
+              @media only screen and (max-width: 600px) {
+  .offer {
+    font-size: 250%; 
+    left: 25%; 
+  }
+  .collection {
+    font-size: 120%; 
+    left: 28%; 
+  }
+  .email, .subscribe {
+    left: 15%; 
+  }
+  input {
+    width: 160%; 
+    padding: 9%; 
+  }
+  .sub {
+    width: 320%; 
+    padding: 24%; 
+  }
+}
+
+
+             .el10{
+                background-color:antiquewhite;
+
+              }
+              .magazine{
+                text-align: center;
+                font-size: 200%;
+              }
+              .stories{
+                text-align: center;
+                color:brown;
+              }
+              .gallery{
+                display: flex;
+                max-width:1200px;
+                margin:20px auto;
+                background-color: white;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+              }
+              .image-section{
+                position: relative;
+                width:50%;
+                overflow: hidden;
+              }
+              .image-section img{
+                width:100%;
+                height:auto;
+                display: block;
+                transition:transform 0.3s ease;
+              }
+              .image-section .overlay{
+                position: absolute;
+                top:0;
+                left:0;
+                width: 100%;
+                height:100%;
+                background: rgba(255,0,0,0.4);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+              }
+              .image-section:hover .overlay{
+                opacity: 1;
+              }
+              .image-section:hover img{
+                transform: scale(1.1);
+              }
+              .text-section{
+                width:50%;
+                padding:20px;
+              }
+              .text-section h1{
+                margin:10px 0;
+                color:#333;
+                font-size: 2em;
+              }
+              .text-section .description{
+                color:#555;
+                line-height:1.6;
+                margin:20px 0;
+              }
+              .text-section .news{
+                color:#999;
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+              .text-section .comments{
+                color:black;
+                font-size:2em;
+                display: flex;
+                align-items: center;
+              }
+              .text-section .comments i{
+                margin-right:5px;
+            }
+            .text-section .comments :hover{
+              color: red;
+              
+            }
+            @media only screen and (max-width: 600px) {
+  .gallery {
+    flex-direction: column; 
+    max-width: 100%; 
+    margin: 10px auto; 
+  }
+
+  .image-section, .text-section {
+    width: 100%; 
+  }
+
+  .image-section {
+    height: auto; 
+  }
+
+  .image-section img {
+    width: 100%; 
+    height: auto; 
+    transform: none; 
+  }
+
+  .text-section {
+    padding: 15px; 
+  }
+
+  .text-section h1 {
+    font-size: 1.5em; 
+    margin: 5px 0; 
+  }
+
+  .text-section .description {
+    font-size: 0.9em; 
+    margin: 15px 0; 
+  }
+
+  .text-section .news {
+    font-size: 0.8em; 
+  }
+
+  .text-section .comments {
+    font-size: 1.5em; 
+  }
+
+  .magazine {
+    font-size: 1.5em; 
+  }
+
+  .stories {
+    font-size: 1.2em; 
+  }
+}
+
+              .el11{
+              background-color: black;
+              margin:0;
+            }
+            .footer {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 15px;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.footer-column p, .footer-column a {
+    color: #bfbfbf;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+}
+
+.payment-icons img {
+    margin: 5px 10px 5px 0;
+}
+
+.product-list {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.product-list li {
+    display: flex;
+    margin-bottom: 10px;
+    
+}
+.product-list strong{
+  color:white;
+}
+
+.product-list img {
+    margin-right: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #bfbfbf;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+.end{
+  text-align: center;
+  color: red;
+}
+@media only screen and (max-width: 600px) {
+  .footer-container {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 0 10px; 
+  }
+
+  .footer-column {
+    padding: 0 5px; 
+    margin-bottom: 30px; 
+    min-width: 100%; 
+  }
+
+  .footer-column h3 {
+    font-size: 1.1em; 
+    margin-bottom: 15px;
+  }
+
+  .footer-column p, .footer-column a {
+    font-size: 0.85em; 
+  }
+
+  .payment-icons img {
+    width: 15%; 
+    height: auto; 
+    margin: 10px 5px; 
+  }
+
+  .product-list li {
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+  .product-list img {
+    margin: 0 0 10px 0; 
+    width: 50%; 
+    height: auto; 
+  }
+
+  .product-list strong, .product-list p {
+    font-size: 1em; 
+  }
+
+  .footer-links li {
+    margin-bottom: 8px; 
+  }
+
+  .end {
+    font-size: 0.9em; 
+    margin-top: 20px;
+    padding: 20px; 
+  }
+}
+
+
+ </style>
+     </head>
+     <body>
+     
+        <nav class="navbar">
+          <div class="brand-title">CLOTHING SWAP</div>
+          
+           <a href="#" class="toggle-button" onclick="toggleMenu()">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a> 
+          <div class="navbar-links">
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#women">Women &#9662;</a>
+                      <ul>
+                          <li><a href="#">Dress</a></li>
+                          <li><a href="#">Jacket</a></li>
+                          <li><a href="#">Sweater</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#men">Men &#9662;</a>
+                  <ul>
+                      <li><a href="#">Sweater</a></li>
+                      <li><a href="#">Jacket</a></li>
+                      <li><a href="#">Pant</a></li>
+                  </ul></li>
+                  <li><a href="#shoes">Shoes</a></li>
+                  <li><a href="#magazine">Magazine</a></li>
+                  <li><a href="#"><i class="fa fa-search"></i></a></li>
+                  <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+              </ul>
+          </div>
+          
+
+      </nav>
+      
+        <br><br><br>
+        <div class="el1">
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="icon"> <a href=""><span class="material-symbols-outlined">
+                      change_history
+                      </span></a></div> 
+                    <a href=""><i class="fa-solid fa-tags"></i></a><br><br><br>
+                    <h1>New, Amazing <br>Stuff Is Here</h1><br><br><br><br>
+                    <p>Shop today and get <span class="highlight">20% discount</span></p>
+                    <div class="icon2"><a href=""><span class="material-symbols-outlined">
+                      change_history
+                      </span></a></div>
+                    <div class="shop">
+                        <div class="shop1">Shop Now</div>
+                   <div class="cr1"><span class="material-symbols-outlined">
+                    radio_button_unchecked
+                    </span>
+                </div>
+                </div>
+                </div>
+                  <div class="fade-in-fade-out"> 
+                    <img src="https://png.pngtree.com/png-vector/20240724/ourmid/pngtree-ai-generated-girl-in-a-beautiful-red-long-evening-dress-isolated-png-image_13227422.png" alt="">
+                  </div>
+            </section>
+       </div><br><br><br><br>
+        <div class="el2">
+            <div class="para1">
+            <div class="pa1">
+                <span class="material-symbols-outlined">
+                    local_shipping 
+                    </span></div>
+                   <div class="pa1a"> NEXT DAY SHIPPING <br>
+  Lorem ipsum dolor sit amet,<br> consectetur elit. Nulla sem  <br>libero, dignissim sit amet consequa</div></div>
+            <div class="para1">
+            <div class="pa2">
+                <span class="material-symbols-outlined">
+                    cached
+                    </span></div>
+                   <div class="pa2a"> FREE 20 DAY RETURNS <br>
+  Lorem ipsum dolor sit amet,<br> consectetur elit. Nulla sem <br>libero, dignissim sit amet consequa</div>
+   </div>
+            <div class="para1">
+            <div class="pa3">
+                <span class="material-symbols-outlined">
+                    lock
+                    </span></div>
+                    <div class="pa3a">SECURE CHECKOUT <br>
+  Lorem ipsum dolor sit amet,<br> consectetur elit. Nulla sem <br>libero, dignissim sit amet consequa</div>
+      </div>
+       </div><br><br><br><br>
+        <div class="el3">
+            <div class="container1" id="women">
+            <div class="box1">
+               <div class="cloud"> <span class="material-symbols-outlined">
+                    cloud
+                    </span></div>
+                    <div class="s1"><h1>This Season</h1></div><br><br><br>
+                    <div class="p1"><p>BE READY TO CHANGE</p></div><br><br>
+                    <div class="p2"><a href="#" class="shop-button">Shop Women</a></div>
+                    </div>
+                    <div class="container2">
+                      <div class="black-shirt"><img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/2.jpg" alt="">
+                      </div>
+                         </div>
+                 </div></div><br><br><br>
+                     <div class="el4">
+          <div class="new">New Arrivals</div><br>
+          <div class="drms">DENIM DREAMS</div><br><br>
+          <div class="product-grid">
+          <div class="product-card">
+            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5391345406_2_1_1-1.jpg" ><br><br>
+            <div class="product-info"><h3>Stripped denim dress</h3>
+            <p class="category">DRESS</p>
+            <p class="price"><span class="old-price">$34.00 </span>$19.99</p>
+            <button class="add-to-cart"><span class="material-symbols-outlined">
+              shopping_cart
+              </span></button></div>
+             </div>
+             <div class="product-card">
+              <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/1512311009_2_5_1-1.jpg" alt="hover">
+              <div class="product-info">
+                <h3>Scarf Fabric Tie-Up Wedges</h3>
+                <p class="category">SHOES</p>
+                <p class="price">$39.99</p>
+                <button class="add-to-cart"><span class="material-symbols-outlined">
+                  shopping_cart
+                  </span></button>
+              </div>
+             </div>
+             <div class="product-card">
+              <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/9711314406_2_1_1-1.jpg" alt="">
+              <div class="product-info">
+                <h3>Oversized Denim Jacket</h3>
+                <p class="category">JACKET</p>
+                <p class="price">$25.99</p>
+                <button class="add-to-cart"><span class="material-symbols-outlined">
+                  shopping_cart
+                  </span></button>
+              </div>
+             </div>
+          </div>
+
+        </div><br><br><br><br><br>
+        <div class="el5" id="shoes">
+          <div class="trans1">
+            <img src="https://png.pngtree.com/png-vector/20231108/ourmid/pngtree-curiosity-fashion-girl-png-image_10511716.png" alt="">
+          </div>
+          <div class="trans2">
+            <div class="sandals1">
+              Khaki Lace Up Sandals<br><br>
+            </div>
+            <div class="sandals2">
+              <p>THIS MONTH ITEM ON <strong>MEGA SALE</strong></p>
+            </div><br><br><br>
+            <div id="countdown" class="countdown">
+              <div id="weeks">00</div>:
+              <div id="days">00</div>:
+              <div id="hours">00</div>:
+              <div id="minutes">00</div>:
+              <div id="seconds">00</div>
+            </div><br><br>
+            <div class="grab"><a href="#" class="grabitem">Grab It Till You Can</a></div>
+            </div>
+
+        </div><br><br><br><br>
+        <div class="el6">
+          <div class="new1">New Arrivals</div><br>
+          <div class="drms1">MENS JACKETS</div><br><br><br>
+          <div class="boot" >
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/Layer-5131.jpg" class="image3 " alt="...">
+              </div>
+              <div class="carousel-item display-flex">
+                <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/Layer-512.jpg" class="image3  " alt="...">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div class="boot1" id="men">
+            <div class="fire" ><span class="material-symbols-outlined">
+              mode_heat
+              </span></div>
+              <div class="world">EXPERIENCE WORLD</div><br>
+              <div class="look">IN NEW LOOK</div><br><br>
+              <div class="shop-men">Shop Men</div>
+
+          </div>
+          </div>
+        </div><br><br>
+        <div class="el7">
+          <div class="trending">Trending Now</div><br><br>
+          <div class="trends">
+          <div class="outer">
+            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5593559500_2_5_1.jpg" alt="">
+          <div class="inner">
+            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5593559500_2_4_1.jpg" alt="">
+          </div><br>
+         <div class="shirt">Stripped Sweatshirt</div>
+         <div class="sweater" style="color:#999">SWEATER</div>
+         <div class="cost"><b>$42.00</b></div>
+         <div class="nik" ><span class="material-symbols-outlined">
+          shopping_cart
+          </span></div>
+          
+        </div>
+        
+        <div class="outer1">
+          <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5559315711_2_5_1.jpg" alt="">
+          <div class="inner1">
+            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5559315711_2_4_1.jpg" alt="">
+          </div>
+          <div class="shirt1">Rose Bold</div>
+          <div class="sweater1" style="color: #999;">SWEATER</div>
+          <div class="cost1"><b>$28.00</b></div>
+          <div class="nik1"><span class="material-symbols-outlined">
+            shopping_cart
+            </span></div>
+        </div>
+        <div class="outer2">
+          <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5680505811_2_1_1.jpg" alt="">
+          <div class="inner2">
+            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5680505811_2_4_1.jpg" alt="">
+          </div>
+          <div class="shirt2">Checked Tailored Trousers</div>
+          <div class="sweater2" style="color: #999;">PANTS</div>
+          <div class="cost2"><b>$38.00</b></div>
+          <div class="nik2"><span class="material-symbols-outlined">
+            shopping_cart
+            </span></div>
+        </div>
+         </div>
+      </div><br><br>
+          <div class="el9">
+          <div class="looking">
+          <img src="https://img.freepik.com/premium-photo/excited-girl-boy-having-their-first-date-smiling-looking-each-other-as-they-walk-along-th_129180-7224.jpg?w=900" width="100%">
+          <div class="offer">Subscribe  And <br>Get  10%  Off</div>
+          <!-- <div class="collection">Our New Collection</div><br> -->
+          <div class="email"><input type="email" placeholder="Enter Your Email"></div><br><br>
+          <div class="subscribe"><button class="sub"><b>SUBSCRIBE</b></button>
+           </div>
+           </div>
+        <div class="el10" id="magazine">
+          
+          <div class="magazine">Our Magazine</div><br>
+          <div class="stories">READ OUR STORIES</div><br>
+          <div class="gallery">
+            <div class="image-section">
+              <img src="https://static-koimoi.akamaized.net/wp-content/new-galleries/2022/12/lady-gaga-once-broke-down-recalling-her-casting-couch-experience-001.jpg" alt="summer hits image">
+              <div class="overlay"></div>
+            </div>
+            <div class="text-section">
+              <h1>Summer Hits</h1>
+              <p class="description">Aliquam ornare mauris quis sapien interdum euismod. Nullam a elementum odio. Vivamus vestibulum bibendum orci, eget ultricies mi luctus et. Nulla fermentum, leo ac...</p>
+              <p class="news">NEWS</p>
+              <p class="comments"><i class="fa-regular fa-comment"></i>&nbsp;</p>
+            </div>
+       </div>
+       </div>
+        
+        <div class="el11">
+          <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Payment Method</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
+                    <div class="payment-icons">
+                      <img src="visa.png" alt="visa" width="10%" height="10%">
+                      <img src="mastercard.png" alt="mastercard" width="10%" height="10%">
+                      <img src="american express.png" alt="american express" width="10%" height="10%">
+                      <img src="paypal.png" alt="paypal" width="10%" height="10%">
+                      <img src="jcb.png" alt="jcb" width="10%" height="10%">
+                      </div>
+                      <p><span class="material-symbols-outlined">
+                        lock
+                        </span>Secure Online Payment</p>
+                      </div>
+                      <div class="footer-column">
+                          <h3>Payment Method</h3>
+                          <ul class="product-list">
+                              <li>
+                                <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5711515833_2_1_1-660x660.jpg" alt="Denim Trucker Jacket" width="10%" height="10%">
+                                <div>
+                                  <strong>Denim Trucker Jacket</strong>
+                                  <p>£58.00</p>
+                              </div>
+                          </li>
+                          <li>
+                            <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5391345406_2_1_1-1-660x660.jpg" alt="Striped denim dress" width="10%" height="10%">
+                            <div>
+                              <strong>Striped denim dress</strong>
+                              <p><del>£34.00</del> £19.99</p>
+                          </div>
+                      </li>
+                      <li>
+                        <img src="https://jevelin.shufflehound.com/fashion-shop/wp-content/uploads/sites/27/2018/03/5713501400_2_5_1-660x660.jpg" alt="Denim Vest" width="10%" height="10%">
+                        <div>
+                          <strong>Denim Vest</strong>
+                          <p>£32.00</p>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Shopping Guide</h3>
+              <ul class="footer-links">
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Shipment</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Policies</a></li>
+                  <li><a href="#">Gift cards</a></li>
+                  <li><a href="#">Clothing care</a></li>
+                    <li><a href="#">Purchase conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul class="footer-links">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Our team</a></li>
+                    <li><a href="#">Offices</a></li>
+                    <li><a href="#">Affiliates</a></li>
+                    <li><a href="#">Giveaway</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+            </div>
+            <div class="end">Copyright ©2024 Clothing Swap
+
+            </div>
+        </footer>
+        
+      </div>
+       <script>
+        function toggleMenu() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.classList.toggle('active');
+}
+
+    </script> 
+   <script src="script.js"></script>  
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>
