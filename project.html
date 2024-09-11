@@ -16,6 +16,9 @@
          body{
             overflow-x: hidden;
          }
+         html{
+          overflow-x: hidden;
+         }
            
         .navbar {
     display: flex;
@@ -174,12 +177,13 @@
   .navbar-links.active {
     display: flex;
   }
-}
+
 
 /* Toggle Menu Function */
 function toggleMenu() {
   const navbarLinks = document.querySelector('.navbar-links');
   navbarLinks.classList.toggle('active');
+}
 }
 
            .el9{
